@@ -54,4 +54,29 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('Funciones', fontsize=16)
+    ax1 = fig.add_subplot(2, 2, 1)
+    ax2 = fig.add_subplot(2, 2, 2)
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+
+    ax1.plot(x, y1, c='m', label = 'y = x**2')
+    ax1.legend(fontsize = 12)
+    ax1.grid(ls = '-')
+
+    ax2.plot(x, y2, c='b', label = 'y = x**3')
+    ax2.legend(fontsize = 12)
+    ax2.grid(ls = '-')
+
+    ax3.plot(x, y3, c='r', label = 'y = x**4')
+    ax3.legend(fontsize = 12)
+    ax3.grid(ls = '-')
+
+    ax4.plot(x, y4, c='g', label = 'y = √x')
+    ax4.legend(fontsize = 12)
+    ax4.grid(ls = '-')
+
+    plt.show()
+    
     print("terminamos")

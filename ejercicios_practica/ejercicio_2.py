@@ -8,6 +8,7 @@
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
+from cProfile import label
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -46,4 +47,11 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(x, y1, c='b', label='y = x**2')
+    ax.plot(x, y2, c='g', label='y = x**3')
+    ax.legend()
+    plt.show()
     print("terminamos")
